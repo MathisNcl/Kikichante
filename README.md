@@ -1,2 +1,3 @@
 # Kikichante
-Webapp using NLP to determine what is the main influence artist of a sentence entered
+
+Webapp using NLP to determine if a sentence inputed could be a Bob Marley lyric.
