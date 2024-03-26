@@ -67,7 +67,7 @@ with st.expander("See methodology"):
         """
         Data are collected from [Genius](https://genius.com/) using [LyricsGenius](https://lyricsgenius.readthedocs.io/en/master/).
 
-        To determine whether the text is from Bob Marley are not, lyrics from sevreal singers had been collected.
+        To determine whether the text is from Bob Marley or not, lyrics from several singers have been collected.
         - 50 songs from Bob Marley
         - 10 songs for others:
             - Bruno Mars
