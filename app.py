@@ -1,6 +1,5 @@
 """Front of the Web App"""
 
-import logging
 import random
 import json
 
@@ -8,7 +7,9 @@ import pandas as pd
 import streamlit as st
 from transformers import Pipeline, pipeline
 
-logger = logging.getLogger(__name__)
+logger = st._logger.get_logger(__name__)
+st._logger.set_log_level("INFO")
+
 st.set_page_config(page_title="Bob or not bob?", page_icon="🎤")
 
 
@@ -55,7 +56,7 @@ text_input: str = st.text_input("Enter your lyrics👇")
 if text_input:
     with st.spinner("Wait for it..."):
         prediction: dict = classifier(text_input)[0]
-        logger.info(f"Input text : {text_input} ; Output : {json.dumps(prediction)}")
+        logger.info(f"Input text : '{text_input}' ; Output : {json.dumps(prediction)}")
         show_prediction(prediction)
 
 with st.expander("See methodology"):
